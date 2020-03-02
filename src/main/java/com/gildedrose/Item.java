@@ -47,7 +47,7 @@ public class Item {
         }
     }
 
-    private void updateSellIn() {
+    protected void updateSellIn() {
         if (isSulfuras()) {
             return;
         }
