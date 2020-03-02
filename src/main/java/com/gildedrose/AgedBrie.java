@@ -5,10 +5,6 @@ public class AgedBrie extends Item {
         super("Aged Brie", sell_in, quality);
     }
 
-    public boolean isAgedBrie() {
-        return true;
-    }
-
     @Override
     protected void updateQuality() {
         if (quality < 50) {
