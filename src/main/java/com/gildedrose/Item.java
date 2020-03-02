@@ -30,30 +30,18 @@ public class Item {
     protected void updateQualityAfterExpiration() {
         if (sell_in < 0) {
             if (quality > 0) {
-                if (!isSulfuras()) {
-                    quality = quality - 1;
-                }
+                quality = quality - 1;
             }
         }
     }
 
     protected void updateSellIn() {
-        if (isSulfuras()) {
-            return;
-        }
         sell_in = sell_in - 1;
     }
 
     protected void updateQuality() {
         if (quality > 0) {
-            if (isSulfuras()) {
-                return;
-            }
             quality = quality - 1;
         }
-    }
-
-    private boolean isSulfuras() {
-        return name.equals("Sulfuras, Hand of Ragnaros");
     }
 }
