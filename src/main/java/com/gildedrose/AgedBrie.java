@@ -1,6 +1,4 @@
-package com.gildedrose.Items;
-
-import com.gildedrose.Item;
+package com.gildedrose;
 
 public class AgedBrie extends Item {
     public AgedBrie(String name, int sell_in, int quality) {
