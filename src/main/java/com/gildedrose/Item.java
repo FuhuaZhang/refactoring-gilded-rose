@@ -54,7 +54,7 @@ public class Item {
         sell_in = sell_in - 1;
     }
 
-    private void updateQuality() {
+    protected void updateQuality() {
         if (isAgedBrie()) {
             if (quality < 50) {
                 quality = quality + 1;
