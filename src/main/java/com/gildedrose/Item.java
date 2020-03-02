@@ -27,20 +27,14 @@ public class Item {
         updateQualityAfterExpiration();
     }
 
-    private void updateQualityAfterExpiration() {
+    protected void updateQualityAfterExpiration() {
         if (sell_in < 0) {
-            if (isAgedBrie()) {
-                if (quality < 50) {
-                    quality = quality + 1;
-                }
+            if (isBackstage()) {
+                quality = 0;
             } else {
-                if (isBackstage()) {
-                    quality = 0;
-                } else {
-                    if (quality > 0) {
-                        if (!isSulfuras()) {
-                            quality = quality - 1;
-                        }
+                if (quality > 0) {
+                    if (!isSulfuras()) {
+                        quality = quality - 1;
                     }
                 }
             }
