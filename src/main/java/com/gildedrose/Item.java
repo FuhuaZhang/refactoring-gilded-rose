@@ -58,36 +58,19 @@ public class Item {
         if (isAgedBrie()) {
             if (quality < 50) {
                 quality = quality + 1;
-
-                if (isBackstage()) {
-                    if (sell_in < 11) {
-                        if (quality < 50) {
-                            quality = quality + 1;
-                        }
-                    }
-
-                    if (sell_in < 6) {
-                        if (quality < 50) {
-                            quality = quality + 1;
-                        }
-                    }
-                }
             }
         } else if (isBackstage()) {
             if (quality < 50) {
                 quality = quality + 1;
-
-                if (isBackstage()) {
-                    if (sell_in < 11) {
-                        if (quality < 50) {
-                            quality = quality + 1;
-                        }
+                if (sell_in < 11) {
+                    if (quality < 50) {
+                        quality = quality + 1;
                     }
+                }
 
-                    if (sell_in < 6) {
-                        if (quality < 50) {
-                            quality = quality + 1;
-                        }
+                if (sell_in < 6) {
+                    if (quality < 50) {
+                        quality = quality + 1;
                     }
                 }
             }
@@ -110,6 +93,6 @@ public class Item {
     }
 
     protected boolean isAgedBrie() {
-        return name.equals("Aged Brie");
+        return false;
     }
 }
