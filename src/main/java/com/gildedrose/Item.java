@@ -81,8 +81,4 @@ public class Item {
     private boolean isBackstage() {
         return name.equals("Backstage passes to a TAFKAL80ETC concert");
     }
-
-    protected boolean isAgedBrie() {
-        return false;
-    }
 }

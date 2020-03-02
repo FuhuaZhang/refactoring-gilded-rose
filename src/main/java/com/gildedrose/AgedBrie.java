@@ -5,7 +5,6 @@ public class AgedBrie extends Item {
         super("Aged Brie", sell_in, quality);
     }
 
-    @Override
     public boolean isAgedBrie() {
         return true;
     }
